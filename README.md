@@ -2,7 +2,7 @@
 
 This repository contains the implementation of a quantitative framework for modeling and calibrating the **Implied Volatility (IV) Smile** using the **Stochastic Volatility Inspired (SVI)** parameterization. This project was developed as part of a thesis focused on financial derivatives and risk management.
 
-## 📌 Project Overview
+## Project Overview
 
 The calibration of the volatility surface is essential for option pricing, hedging, and identifying market inefficiencies. This project provides a complete pipeline from raw market data acquisition to the generation of smooth, arbitrage-free volatility smiles.
 
@@ -12,7 +12,7 @@ The calibration of the volatility surface is essential for option pricing, hedgi
 * **SVI Parameterization:** Implements the Raw SVI model to capture the characteristic "smile" or "skew" of equity options.
 * **Grid Interpolation:** Maps discrete market data onto a continuous log-moneyness grid for standardized analysis.
 
-## 🛠️ Technical Stack
+## Technical Stack
 
 * **Language:** Python 3.x
 * **Libraries:** * `numpy` & `pandas`: Numerical operations and data structures.
@@ -20,7 +20,7 @@ The calibration of the volatility surface is essential for option pricing, hedgi
     * `matplotlib`: Technical visualization of volatility surfaces.
     * `scipy`: Optimization for model calibration.
 
-## 📉 Methodology
+## Methodology
 
 ### 1. The SVI Model
 The model fits the total variance $w(k)$ as a function of log-moneyness $k$:
@@ -38,8 +38,5 @@ Where:
 3.  **Mapping:** Projecting data into $(k, w)$ space.
 4.  **Calibration:** Minimizing the sum of squared errors between market variance and SVI predicted variance.
 
-## 🚀 Getting Started
-
-### Prerequisites
-```bash
-pip install numpy pandas matplotlib yfinance scipy
+## Results
+The notebook generates visualizations comparing raw market data (scatter) against the interpolated and modeled volatility smiles (line), allowing for a visual assessment of the model's fit to the market skew.
